@@ -1,56 +1,34 @@
-#include <iostream>
-#include <cmath>
-#include <vector>
+// this code is o(n)
 
-void checkIfHaveNum(int const&, std::vector<int>&, std::vector<int>&);
+#include <iostream>
 
 int main(void) {
-	std::vector<int> haveNum{};
-	std::vector<int> muchNum{};
 
-	int inputNum;
+	unsigned int inputNum;
 	std::cin >> inputNum;
 
-	int num = sqrt(inputNum);
+	std::cout << inputNum << " = ";
 
-	for (int i = 2; num >= i  ; i++) {
-		std::cout << "hi ";
-		while (!(inputNum % i)) {
-			std::cout << "hi2 " << '\n';
+	for ( unsigned int i = 2; inputNum >= i  ; ++i) {
+		unsigned int numTime = 0;
+		while(! (inputNum % i)) {
 			inputNum /= i;
-			checkIfHaveNum(i,haveNum ,muchNum);
+			numTime++;
+
+		}
+
+		if(numTime) { 
+			std::cout << i;
+			if(--numTime){
+				std::cout << "^" << ++numTime;
+			}
+		} else { continue; }
+
+		if ( inputNum > i ) {		
+		std::cout << " x ";
 		}
 	}
-
-	haveNum.push_back(inputNum);
-	muchNum.push_back(1);
-
-
-	for (int i : haveNum) {
-		std::cout << i << '\n';
-	}
-
-	for (int i : muchNum) {
-		std::cout << i << '\n';
-	}
-
-		 
+ 
 	return 0;
 }
 
-void checkIfHaveNum(int const& n,std::vector<int> &haveNum , std::vector<int>& muchNum) {
-	static int muchNumIndex = -1;
-	for(int i: haveNum) { 
-		if ( i == n) {
-			++muchNum[muchNumIndex];
-			std::cout << "number increass" << '\n';
-		}
-		else { 
-			std::cout << "number add" << '\n'; ;
-			haveNum.push_back(i);
-			muchNumIndex++;
-		}
-	} 
-
-
-}
