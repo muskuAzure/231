@@ -1,4 +1,4 @@
-// this code is o(n)
+// this code is o(sqrt(n))
 
 #include <iostream>
 #include <cmath>
@@ -14,7 +14,7 @@ int main(void) {
 
 	for ( unsigned int i = 2; rootNum >= i  ; ++i) {
 		unsigned int numTime = 0;
-		while(! (inputNum % i)) {
+		while(! (inputNum % i) ) {
 			inputNum /= i;
 			numTime++;
 
