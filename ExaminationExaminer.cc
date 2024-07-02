@@ -1,7 +1,7 @@
 // this code is o(e*s^2)
 
 // if the range of the mutiple choice is more than 9 (decimal) this code will not not work probably 
-// in that case you should sitch to using numeric type to hold data but again the range may be excess in than case you should store data in string of char by spliting the white space
+// in that case you should switch to using numeric type to hold data but again the range may be excess in that case you should store data in string of char by spliting the white space
 
 #include <iostream>
 
