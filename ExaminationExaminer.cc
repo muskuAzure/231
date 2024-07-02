@@ -1,9 +1,7 @@
 // this code is o((e*s)*s)
 
-// i could use int but that would take more byte and there is't gurantee that shot int is avalible in target machine 
-// my first thought is i want this program to be dynmic but i have concern about the runtime so i will set this progra to be static 
-
-// i can do while(cin) and it will only use 1000 byte but it will waste run time so i choose to so getline instend because cin is "VERY S L O W" compare to other method in this case getline 
+// if the range of the mutiple choice is more than 9 (decimal) this code will not not work probably 
+// in that case you should sitch to using numeric type to hold data but again the range may be excess in than case you should store data in string of char by spliting the white space
 
 #include <iostream>
 
@@ -37,3 +35,9 @@ int main(void) {
     }
 
 }
+
+
+// i could use int but that would take more byte and there is't gurantee that shot int is avalible in target machine 
+// my first thought is i want this program to be dynmic but i have concern about the runtime so i will set this progra to be static *_*
+
+// i can do while(cin) and it will only use 1000 byte but it will waste run time so i choose to so getline instend because cin is "VERY S L O W" compare to other method in this case getline 
