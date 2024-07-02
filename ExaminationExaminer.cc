@@ -1,4 +1,4 @@
-// this code is o(n*s)
+// this code is o((e*s)*s)
 
 // i could use int but that would take more byte and there is't gurantee that shot int is avalible in target machine 
 // my first thought is i want this program to be dynmic but i have concern about the runtime so i will set this progra to be static 
