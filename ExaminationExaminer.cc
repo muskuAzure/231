@@ -21,7 +21,7 @@ int main(void) {
 
     //get 1 answer from student and check it and then put score in array studentScore
     for(int i = 0; studentNum > i ; i++){
-        char studentAnswer[2001];
+        char studentAnswer[1001];
         std::cin.getline(studentAnswer, 2000);
         for(int j = 0;examNumTime2 >= j;j += 2){
             if(rightAnswer[j] == studentAnswer[j]) {
