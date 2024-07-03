@@ -41,3 +41,5 @@ int main(void) {
 // my first thought is i want this program to be dynmic but i have concern about the runtime so i will set this progra to be static *_*
 
 // i can do while(cin) and it will only use 1000 byte but it will waste run time so i choose to so getline instend because cin is "VERY S L O W" compare to other method in this case getline 
+
+// test 
