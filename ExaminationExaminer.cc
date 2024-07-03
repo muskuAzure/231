@@ -1,3 +1,4 @@
+
 // this code is o(e*s^2)
 
 // if the range of the mutiple choice is more than 9 (decimal) this code will not not work probably 
@@ -7,24 +8,29 @@
 
 int main(void) {
 
-    char rightAnswer[1001];
-    short int studentScore[10001];
-    short int studentNum, examNum; 
+    int rightAnswer[1001];
+    int studentScore[10001];
+    int studentNum, examNum; 
 
     std::cin >> studentNum >> examNum;
 
-    short int examNumTime2 = (examNum - 1 ) * 2;
+    std::cin.ignore();
+
+    // get the right answer 
+    for(int i = 0; examNum > i; i++){
+        std::cin >> rightAnswer[i];
+    }
 
     std::cin.ignore();
 
-    std::cin.getline(rightAnswer, 2000);
+    // std::cin.getline(rightAnswer, 2000);
 
     //get 1 answer from student and check it and then put score in array studentScore
     for(int i = 0; studentNum > i ; i++){
-        char studentAnswer[1001];
-        std::cin.getline(studentAnswer, 2000);
-        for(int j = 0;examNumTime2 >= j;j += 2){
-            if(rightAnswer[j] == studentAnswer[j]) {
+        int studentAnswer[1001];
+        for(int j = 0; examNum > j; j++){
+        std::cin >> studentAnswer[j];
+            if ( studentAnswer[j] == rightAnswer[j] ){
                 studentScore[i]++;
             }
         }
@@ -36,7 +42,11 @@ int main(void) {
 
 }
 
+//v2
+// 
 
+
+// v1
 // i could use int but that would take more byte and there is't gurantee that shot int is avalible in target machine 
 // my first thought is i want this program to be dynmic but i have concern about the runtime so i will set this progra to be static *_*
 
