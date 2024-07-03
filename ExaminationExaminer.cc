@@ -19,7 +19,7 @@ int main(void) {
 
     std::cin.getline(rightAnswer, 2000);
 
-    //get 1 answer from atudent and check it and then put score in array studentScore
+    //get 1 answer from student and check it and then put score in array studentScore
     for(int i = 0; studentNum > i ; i++){
         char studentAnswer[2001];
         std::cin.getline(studentAnswer, 2000);
