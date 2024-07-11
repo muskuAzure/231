@@ -55,4 +55,7 @@ int main(void) {
     std::cout << "The weakest monster is " << monsterBook[bookmarkForWeak].name << " with evaluation of " << monsterBook[bookmarkForWeak].power << "\n";
     std::cout << "The strongest monster is " << monsterBook[bookmarkForStrong].name << " with evaluation of " << monsterBook[bookmarkForStrong].power;
 
+    delete []monsterBook;
+
+    return 0;
 }
