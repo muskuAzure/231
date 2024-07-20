@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <limits>
 
 struct Monster {
     std::string name;
@@ -26,7 +25,7 @@ int main(void) {
     unsigned short int monNum;
     std::cin >> monNum;
 
-    long min = LONG_MAX,max = LONG_MIN;
+    long min = 2147483647 ,max = -2147483648 ;
     int bookmarkForWeak, bookmarkForStrong;
 
     Monster *monsterBook = new Monster[monNum];

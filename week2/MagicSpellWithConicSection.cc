@@ -8,7 +8,7 @@ struct Point {
 int main(void){
     std::string spellArea,buffer;
     short int numEnemyPosition;
-    bool isNegative,isPower,isY,isX,isOtherSide;
+    bool isNegative = false ,isPower = false,isY = false,isX = false,isOtherSide = false;
 
     std::cin >> numEnemyPosition;
     Point *allEnemyPosition = new Point[numEnemyPosition];
@@ -36,10 +36,10 @@ int main(void){
             for(int i = 0; numEnemyPosition > i; i++){
  
                 if(isY) {
-                    if(isPower) temp = holdNum * pow(allEnemyPosition[i].y, 2); 
+                    if(isPower) temp = holdNum * (allEnemyPosition[i].y * allEnemyPosition[i].y); 
                     else temp = holdNum * allEnemyPosition[i].y;
                 } else if(isX) {
-                    if(isPower) temp = holdNum * pow(allEnemyPosition[i].x, 2); 
+                    if(isPower) temp = holdNum * (allEnemyPosition[i].x * allEnemyPosition[i].x); 
                     else temp = holdNum * allEnemyPosition[i].x;
                 } else {
                     temp += holdNum;
@@ -86,7 +86,7 @@ int main(void){
     }
 
     for(int i = 0;numEnemyPosition > i;i++){
-        std::cout << "("<< allEnemyPosition[i].x << " ,"<<allEnemyPosition[i].y<< ") ";
+        std::cout << "("<< allEnemyPosition[i].x << ", "<<allEnemyPosition[i].y<< ") ";
         if(allEnemyPosition[i].sum) std::cout << "FALSE\n";
         else std::cout << "TRUE\n";
     }
